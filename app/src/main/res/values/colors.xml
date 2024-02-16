@@ -2,4 +2,14 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="SteelBlue">#4682B4</color>
+    <color name="seekhai">#FFF6E9</color>
+    <color name="fahpad">#BBE2EC</color>
+    <color name="greenner">#0D9276</color>
+    <color name="gray">#C9D7DD</color>
+    <color name="green">#0CBC26</color>
+    <color name="blue">#1D54BF</color>
+    <color name="orange">#DC5D19</color>
+    <color name="red">#CC1313</color>
+    <color name="yellow">#DAA41C</color>
 </resources>

@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">atChiangMai</string>
+    <string name="user_gmail_com">user@gmail.com</string>
+    <string name="feed">Feed</string>
+    <string name="otop">Otop</string>
+    <string name="food">Food</string>
+    <string name="currency">Currency</string>
+    <string name="hospital">Hospital</string>
+    <string name="police">Police</string>
+    <string name="more">More</string>
+    <string name="Otop" />
+    <string name="Hotel" />
+    <string name="hotel" />
+    <string name="hotels">Hotel</string>
 </resources>
