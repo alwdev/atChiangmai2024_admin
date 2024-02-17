@@ -4,78 +4,95 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <RelativeLayout
+    <ScrollView
+        android:id="@+id/scrollView2"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        tools:ignore="MissingConstraints">
+        android:layout_height="match_parent">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:orientation="horizontal">
 
             <TextView
-                android:layout_width="match_parent"
+                android:id="@+id/textView"
+                android:layout_width="0dp"
                 android:layout_height="60dp"
-                android:background="@color/SteelBlue"
-                android:padding="10dp"
-                android:text="@string/atchiangmai"
-                android:textAlignment="center"
-                android:textColor="@color/white"
-                android:textSize="24sp"
-                android:textStyle="bold"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.497"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.019" />
+                android:layout_weight="1"
+                android:background="@color/SteelBlue" />
 
         </LinearLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="atChiangMai"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.019" />
 
     </RelativeLayout>
 
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="129dp"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_marginTop="75dp"
-        android:layout_marginEnd="74dp"
+        android:layout_marginEnd="51dp"
+        android:gravity="start"
         android:text="@string/user_gmail_com"
         android:textSize="16sp"
         android:textStyle="italic" />
 
+
     <ImageView
         android:id="@+id/imageView3"
-        android:layout_width="48dp"
-        android:layout_height="48dp"
+        android:layout_width="37dp"
+        android:layout_height="35dp"
         android:layout_alignParentEnd="true"
         android:layout_marginTop="68dp"
         android:layout_marginEnd="15dp"
+        android:gravity="right"
         app:srcCompat="@drawable/profile" />
 
     <androidx.viewpager2.widget.ViewPager2
         android:id="@+id/viewpager2"
         android:layout_width="match_parent"
-        android:layout_height="250dp"
+        android:layout_height="241dp"
+        android:layout_alignParentTop="true"
         android:layout_marginTop="119dp" />
 
-        <LinearLayout
-            android:id="@+id/slideDotLL"
-            android:layout_marginTop="-16dp"
-            android:layout_width="match_parent"
-            android:orientation="horizontal"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/viewpager2"
-            android:gravity="center"/>
+    <LinearLayout
+        android:id="@+id/slideDotLL"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_below="@+id/viewpager2"
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        android:orientation="horizontal">
 
+    </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
         android:layout_marginStart="10dp"
         android:layout_marginTop="410dp"
         android:layout_marginEnd="10dp"
@@ -96,7 +113,7 @@
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/white_button">
+                    android:background="@drawable/feed">
 
                     <ImageView
                         android:id="@+id/iconfeed"
@@ -106,7 +123,7 @@
                         android:layout_marginTop="16dp"
                         android:layout_marginEnd="16dp"
                         android:layout_marginBottom="16dp"
-                        android:background="@android:drawable/bed_alt"
+                        android:background="@android:drawable/ic_dialog_email"
 
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
@@ -137,7 +154,7 @@
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/white_button">
+                    android:background="@drawable/shopping">
 
                     <ImageView
                         android:id="@+id/iconotop"
@@ -178,7 +195,7 @@
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/white_button">
+                    android:background="@drawable/bed_alt">
 
                     <ImageView
                         android:id="@+id/iconhotel"
@@ -219,7 +236,7 @@
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/white_button">
+                    android:background="@drawable/utensils">
 
                     <ImageView
                         android:id="@+id/iconfood"
@@ -266,7 +283,7 @@
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/white_button">
+                    android:background="@drawable/refresh">
 
                     <ImageView
                         android:id="@+id/iconcurrency"
@@ -307,7 +324,7 @@
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/white_button">
+                    android:background="@drawable/hospital">
 
                     <ImageView
                         android:id="@+id/hosp"
@@ -348,7 +365,7 @@
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/white_button">
+                    android:background="@drawable/police">
 
                     <ImageView
                         android:id="@+id/iconpolice"
@@ -389,7 +406,7 @@
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/white_button">
+                    android:background="@drawable/more">
 
                     <ImageView
                         android:id="@+id/iconmore"
@@ -422,33 +439,15 @@
         </LinearLayout>
     </LinearLayout>
 
-    <LinearLayout
+    <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginTop="650dp"
-        >
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="0dp"
-            android:text="Best Thing to Do in ChiangMai"
-            android:textColor="@color/black"
-            android:textSize="24sp"
-            android:textStyle="bold" />
-
-    </LinearLayout>
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/view1"
-        android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:layout_marginTop="690dp"
-        android:clipToPadding="false"
-        android:paddingStart="24dp"
-        android:paddingEnd="24dp" />
-
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="850dp"
+        android:text="Best Thing to Do in ChiangMai"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold" />
 
 </RelativeLayout>
