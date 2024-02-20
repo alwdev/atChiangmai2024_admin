@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="titleTxt" type="id" />
+    <item name="ownerTxt" type="id" />
+    <item name="priceTxt" type="id" />
+    <item name="pic" type="id" />
+    <item name="besttodo" type="id" />
+    <item name="item_text" type="id" />
+</resources>
