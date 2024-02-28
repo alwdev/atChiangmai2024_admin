@@ -7,33 +7,31 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.atchiangmai.R
-import com.example.atchiangmai.models.RcvhorData
+import com.example.atchiangmai.models.EventData
 
-class Rcvhor(private val rcvhorList: ArrayList<RcvhorData>): RecyclerView.Adapter<Rcvhor.MyViewHolder>() {
+class EventAdapter(private val eventList: ArrayList<EventData>): RecyclerView.Adapter<EventAdapter.MyViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
-        val  view = LayoutInflater.from(parent.context).inflate(R.layout.horrow,parent,false)
+        val  view = LayoutInflater.from(parent.context).inflate(R.layout.eventhor,parent,false)
         return MyViewHolder(view)
     }
 
     override fun getItemCount(): Int {
-        return rcvhorList.size
+        return eventList.size
     }
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
-        val rcvhor = rcvhorList[position]
-        holder.imageView.setImageResource(rcvhor.imagetodo)
-        holder.textView.text = rcvhor.titletodo
+        val eventAdapter = eventList[position]
+        holder.imageView.setImageResource(eventAdapter.eventimage)
+        holder.textView.text = eventAdapter.eventtitle
     }
 
     class MyViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
-        val imageView : ImageView = itemView.findViewById(R.id.imageTodo)
-        val  textView : TextView = itemView.findViewById(R.id.titletodo)
+        val imageView : ImageView = itemView.findViewById(R.id.eventimage)
+        val  textView : TextView = itemView.findViewById(R.id.eventtitle)
     }
 }
 
 private fun ImageView.setImageResource(imagetodo: String) {
 
 }
-
-
